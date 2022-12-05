@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ex2_Forms
@@ -26,6 +19,7 @@ namespace Ex2_Forms
                 n = int.Parse(NTextBox.Text);
 
                 if (n < 1) throw new Exception("Число должно быть больше или равно 1!");
+                if (n % 2 != 0) throw new Exception("Число должно быть четным!");
             }
             catch (FormatException)
             {

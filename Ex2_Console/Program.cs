@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ex2_Console
 {
@@ -16,10 +12,11 @@ namespace Ex2_Console
             {
                 try
                 {
-                    Console.Write("Введите положительное целое число: ");
+                    Console.Write("Введите положительное четное целое число: ");
                     n = int.Parse(Console.ReadLine());
 
                     if (n < 1) throw new Exception("Число должно быть больше или равно 1!");
+                    if (n % 2 != 0) throw new Exception("Число должно быть четным!");
                     break;
                 }
                 catch (FormatException)
